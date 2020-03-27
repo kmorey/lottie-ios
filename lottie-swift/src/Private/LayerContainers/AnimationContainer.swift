@@ -49,7 +49,7 @@ final class AnimationContainer: CALayer {
     print("Lottie: Logging Animation Keypaths")
     animationLayers.forEach({ $0.logKeypaths(for: nil) })
   }
-  
+
   func setValueProvider(_ valueProvider: AnyValueProvider, keypath: AnimationKeypath) {
     for layer in animationLayers {
       if let foundProperties = layer.nodeProperties(for: keypath) {
@@ -60,12 +60,27 @@ final class AnimationContainer: CALayer {
       }
     }
   }
+
+  func setValueFilterProvider(_ valueFilterProvider: AnyValueFilterProvider, keypath: AnimationKeypath) {
+    for layer in animationLayers {
+      if let foundProperties = layer.nodeProperties(for: keypath) {
+        for property in foundProperties {
+          property.setFilterProvider(provider: valueFilterProvider)
+        }
+        layer.displayWithFrame(frame: presentation()?.currentFrame ?? currentFrame, forceUpdates: true)
+      }
+    }
+  }
   
   func getValue(for keypath: AnimationKeypath, atFrame: CGFloat?) -> Any? {
     for layer in animationLayers {
       if let foundProperties = layer.nodeProperties(for: keypath),
         let first = foundProperties.first {
-        return first.valueProvider.value(frame: atFrame ?? currentFrame)
+        let value = first.valueProvider.value(frame: atFrame ?? currentFrame)
+        if let filterProvider = first.valueFilterProvider {
+            return filterProvider.value(value: value, frame: atFrame ?? currentFrame)
+        }
+        return value
       }
     }
     return nil

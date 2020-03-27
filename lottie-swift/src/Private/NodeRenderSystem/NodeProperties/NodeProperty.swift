@@ -20,8 +20,10 @@ class NodeProperty<T>: AnyNodeProperty {
   var valueContainer: AnyValueContainer {
     return typedContainer
   }
-  
+
   var valueProvider: AnyValueProvider
+
+  var valueFilterProvider: AnyValueFilterProvider?
   
   init(provider: AnyValueProvider) {
     self.valueProvider = provider
@@ -38,9 +40,20 @@ class NodeProperty<T>: AnyNodeProperty {
     self.valueProvider = provider
     valueContainer.setNeedsUpdate()
   }
+
+  /// Sets the value filter provider for the property.
+  func setFilterProvider(provider: AnyValueFilterProvider) {
+    guard provider.valueType == valueType else { return }
+    self.valueFilterProvider = provider
+    valueContainer.setNeedsUpdate()
+  }
   
   func update(frame: CGFloat) {
-    typedContainer.setValue(valueProvider.value(frame: frame), forFrame: frame)
+    var value = valueProvider.value(frame: frame)
+    if let valueFilterProvider = valueFilterProvider {
+        value = valueFilterProvider.value(value: value, frame: frame)
+    }
+    typedContainer.setValue(value, forFrame: frame)
   }
   
   fileprivate var typedContainer: ValueContainer<T>

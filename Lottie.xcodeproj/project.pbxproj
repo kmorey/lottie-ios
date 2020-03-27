@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A699CD8242E882E0020FB57 /* AnyValueFilterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A699CD7242E882E0020FB57 /* AnyValueFilterProvider.swift */; };
+		0A699CD9242E88340020FB57 /* AnyValueFilterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A699CD7242E882E0020FB57 /* AnyValueFilterProvider.swift */; };
+		0A699CDA242E88350020FB57 /* AnyValueFilterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A699CD7242E882E0020FB57 /* AnyValueFilterProvider.swift */; };
+		0A699CDB242E88350020FB57 /* AnyValueFilterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A699CD7242E882E0020FB57 /* AnyValueFilterProvider.swift */; };
+		0A699CDC242E88350020FB57 /* AnyValueFilterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A699CD7242E882E0020FB57 /* AnyValueFilterProvider.swift */; };
+		0A699CE0242E88AF0020FB57 /* ColorValueFilterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A699CDF242E88AF0020FB57 /* ColorValueFilterProvider.swift */; };
+		0A699CE1242E88AF0020FB57 /* ColorValueFilterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A699CDF242E88AF0020FB57 /* ColorValueFilterProvider.swift */; };
+		0A699CE2242E88AF0020FB57 /* ColorValueFilterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A699CDF242E88AF0020FB57 /* ColorValueFilterProvider.swift */; };
+		0A699CE3242E88AF0020FB57 /* ColorValueFilterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A699CDF242E88AF0020FB57 /* ColorValueFilterProvider.swift */; };
+		0A699CE4242E88AF0020FB57 /* ColorValueFilterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A699CDF242E88AF0020FB57 /* ColorValueFilterProvider.swift */; };
 		25D5436F22306E2D00ED90FA /* CompatibleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D5436E22306E2D00ED90FA /* CompatibleAnimationView.swift */; };
 		25D543712230787900ED90FA /* CompatibleAnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D543702230787900ED90FA /* CompatibleAnimationKeypath.swift */; };
 		25D5437222307C8700ED90FA /* CompatibleAnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D543702230787900ED90FA /* CompatibleAnimationKeypath.swift */; };
@@ -645,6 +655,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A699CD7242E882E0020FB57 /* AnyValueFilterProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyValueFilterProvider.swift; sourceTree = "<group>"; };
+		0A699CDF242E88AF0020FB57 /* ColorValueFilterProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorValueFilterProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueFilterProviders/ColorValueFilterProvider.swift"; sourceTree = SOURCE_ROOT; };
 		25D5436E22306E2D00ED90FA /* CompatibleAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibleAnimationView.swift; sourceTree = "<group>"; };
 		25D543702230787900ED90FA /* CompatibleAnimationKeypath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibleAnimationKeypath.swift; sourceTree = "<group>"; };
 		4866744022249C4E00258C00 /* TextAnimatorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAnimatorNode.swift; sourceTree = "<group>"; };
@@ -823,6 +835,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A699CDE242E88990020FB57 /* ValueFilterProviders */ = {
+			isa = PBXGroup;
+			children = (
+				0A699CDF242E88AF0020FB57 /* ColorValueFilterProvider.swift */,
+			);
+			path = ValueFilterProviders;
+			sourceTree = "<group>";
+		};
 		25D5436B22306C8C00ED90FA /* Compatibility */ = {
 			isa = PBXGroup;
 			children = (
@@ -963,7 +983,9 @@
 			children = (
 				486E8718220B78BF007CD915 /* AnimationKeypath.swift */,
 				486E8719220B78BF007CD915 /* AnyValueProvider.swift */,
+				0A699CD7242E882E0020FB57 /* AnyValueFilterProvider.swift */,
 				486E871A220B78BF007CD915 /* ValueProviders */,
+				0A699CDE242E88990020FB57 /* ValueFilterProviders */,
 			);
 			path = DynamicProperties;
 			sourceTree = "<group>";
@@ -1621,6 +1643,7 @@
 				486E87E7220B78D1007CD915 /* Trim.swift in Sources */,
 				486E87E8220B78D1007CD915 /* ShapeItem.swift in Sources */,
 				486E87E9220B78D1007CD915 /* Shape.swift in Sources */,
+				0A699CD8242E882E0020FB57 /* AnyValueFilterProvider.swift in Sources */,
 				486E87EA220B78D1007CD915 /* Group.swift in Sources */,
 				486E87EB220B78D1007CD915 /* ShapeTransform.swift in Sources */,
 				486E87EC220B78D1007CD915 /* Merge.swift in Sources */,
@@ -1648,6 +1671,7 @@
 				486E8800220B78D1007CD915 /* KeyframeGroup.swift in Sources */,
 				486E8801220B78D1007CD915 /* Keyframe.swift in Sources */,
 				486E8802220B78D1007CD915 /* TextDocument.swift in Sources */,
+				0A699CE0242E88AF0020FB57 /* ColorValueFilterProvider.swift in Sources */,
 				486E8803220B78D1007CD915 /* Glyph.swift in Sources */,
 				486E8804220B78D1007CD915 /* TextAnimator.swift in Sources */,
 				486E8805220B78D1007CD915 /* Font.swift in Sources */,
@@ -1755,6 +1779,7 @@
 				E654753422AAA91600FE590F /* AnimationTextProvider.swift in Sources */,
 				486E8861220B78E4007CD915 /* ShapeItem.swift in Sources */,
 				486E8862220B78E4007CD915 /* Shape.swift in Sources */,
+				0A699CDC242E88350020FB57 /* AnyValueFilterProvider.swift in Sources */,
 				486E8863220B78E4007CD915 /* Group.swift in Sources */,
 				486E8864220B78E4007CD915 /* ShapeTransform.swift in Sources */,
 				486E8865220B78E4007CD915 /* Merge.swift in Sources */,
@@ -1782,6 +1807,7 @@
 				486E8879220B78E4007CD915 /* KeyframeGroup.swift in Sources */,
 				486E887A220B78E4007CD915 /* Keyframe.swift in Sources */,
 				486E887B220B78E4007CD915 /* TextDocument.swift in Sources */,
+				0A699CE1242E88AF0020FB57 /* ColorValueFilterProvider.swift in Sources */,
 				486E887C220B78E4007CD915 /* Glyph.swift in Sources */,
 				486E887D220B78E4007CD915 /* TextAnimator.swift in Sources */,
 				486E887E220B78E4007CD915 /* Font.swift in Sources */,
@@ -1833,6 +1859,7 @@
 				486E88AE220B78F4007CD915 /* AnimationContainer.swift in Sources */,
 				486E88AF220B78F4007CD915 /* LayerTransformNode.swift in Sources */,
 				486E88B0220B78F4007CD915 /* InvertedMatteLayer.swift in Sources */,
+				0A699CE2242E88AF0020FB57 /* ColorValueFilterProvider.swift in Sources */,
 				486E88B1220B78F4007CD915 /* LayerImageProvider.swift in Sources */,
 				486E88B2220B78F4007CD915 /* CompositionLayersInitializer.swift in Sources */,
 				486E88B3220B78F4007CD915 /* TrimPathNode.swift in Sources */,
@@ -1889,6 +1916,7 @@
 				486E88E5220B78F4007CD915 /* TextLayerModel.swift in Sources */,
 				486E88E6220B78F4007CD915 /* PreCompLayerModel.swift in Sources */,
 				486E88E7220B78F4007CD915 /* ShapeLayerModel.swift in Sources */,
+				0A699CDB242E88350020FB57 /* AnyValueFilterProvider.swift in Sources */,
 				486E88E8220B78F4007CD915 /* Animation.swift in Sources */,
 				486E88E9220B78F4007CD915 /* DashPattern.swift in Sources */,
 				CD16164A2367325A00325353 /* GradientValueProvider.swift in Sources */,
@@ -2017,6 +2045,7 @@
 				E654753622AAA91700FE590F /* AnimationTextProvider.swift in Sources */,
 				486E894F220B78FF007CD915 /* ShapeItem.swift in Sources */,
 				486E8950220B78FF007CD915 /* Shape.swift in Sources */,
+				0A699CDA242E88350020FB57 /* AnyValueFilterProvider.swift in Sources */,
 				486E8951220B78FF007CD915 /* Group.swift in Sources */,
 				486E8952220B78FF007CD915 /* ShapeTransform.swift in Sources */,
 				486E8953220B78FF007CD915 /* Merge.swift in Sources */,
@@ -2044,6 +2073,7 @@
 				486E8967220B78FF007CD915 /* KeyframeGroup.swift in Sources */,
 				486E8968220B78FF007CD915 /* Keyframe.swift in Sources */,
 				486E8969220B78FF007CD915 /* TextDocument.swift in Sources */,
+				0A699CE3242E88AF0020FB57 /* ColorValueFilterProvider.swift in Sources */,
 				486E896A220B78FF007CD915 /* Glyph.swift in Sources */,
 				486E896B220B78FF007CD915 /* TextAnimator.swift in Sources */,
 				486E896C220B78FF007CD915 /* Font.swift in Sources */,
@@ -2095,6 +2125,7 @@
 				486E899B220B790E007CD915 /* MaskContainerLayer.swift in Sources */,
 				486E899C220B790E007CD915 /* AnimationContainer.swift in Sources */,
 				486E899D220B790E007CD915 /* LayerTransformNode.swift in Sources */,
+				0A699CE4242E88AF0020FB57 /* ColorValueFilterProvider.swift in Sources */,
 				486E899E220B790E007CD915 /* InvertedMatteLayer.swift in Sources */,
 				486E899F220B790E007CD915 /* LayerImageProvider.swift in Sources */,
 				486E89A0220B790E007CD915 /* CompositionLayersInitializer.swift in Sources */,
@@ -2151,6 +2182,7 @@
 				486E89D2220B790E007CD915 /* ImageLayerModel.swift in Sources */,
 				486E89D3220B790E007CD915 /* TextLayerModel.swift in Sources */,
 				486E89D4220B790E007CD915 /* PreCompLayerModel.swift in Sources */,
+				0A699CD9242E88340020FB57 /* AnyValueFilterProvider.swift in Sources */,
 				486E89D5220B790E007CD915 /* ShapeLayerModel.swift in Sources */,
 				486E89D6220B790E007CD915 /* Animation.swift in Sources */,
 				CD16164C2367325A00325353 /* GradientValueProvider.swift in Sources */,

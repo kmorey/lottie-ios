@@ -18,15 +18,21 @@ protocol AnyNodeProperty {
   
   /// The stored value container for the property
   var valueContainer: AnyValueContainer { get }
-  
+
   /// The value provider for the property
   var valueProvider: AnyValueProvider { get }
+
+  /// The value provider for the property
+  var valueFilterProvider: AnyValueFilterProvider? { get }
   
   /// The Type of the value provider
   var valueType: Any.Type { get }
-  
+
   /// Sets the value provider for the property.
   func setProvider(provider: AnyValueProvider)
+
+  /// Sets the value filter provider for the property.
+  func setFilterProvider(provider: AnyValueFilterProvider)
 }
 
 extension AnyNodeProperty {

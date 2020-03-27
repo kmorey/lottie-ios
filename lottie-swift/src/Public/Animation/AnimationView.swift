@@ -424,6 +424,11 @@ final public class AnimationView: LottieView {
   public func setValueProvider(_ valueProvider: AnyValueProvider, keypath: AnimationKeypath) {
     animationLayer?.setValueProvider(valueProvider, keypath: keypath)
   }
+
+    public func setValueFilterProvider(_ valueFilterProvider: AnyValueFilterProvider, keypath: AnimationKeypath) {
+      animationLayer?.setValueFilterProvider(valueFilterProvider, keypath: keypath)
+    }
+
   /**
    Reads the value of a property specified by the Keypath.
    Returns nil if no property is found.
